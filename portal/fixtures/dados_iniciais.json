@@ -1,0 +1,170 @@
+[
+  {
+    "model": "portal.conteudo",
+    "pk": 1,
+    "fields": {
+      "titulo": "Início",
+      "slug": "inicio",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">Bem-vindos ao Nosso Portal</h2>\n\n    <!-- Caixa com as informações da atividade. -->\n    <article class=\"caixa caixa-clara capa-inicio\">\n        <h3>ATV09 - Migração do Portal para Django</h3>\n        <p>\n            Este portal unifica os projetos de <strong>Gabriel Barbosa</strong> e\n            <strong>Eduardo Joaquim</strong>. Ele começou como um site feito só com HTML, CSS e JavaScript\n            e agora foi migrado para o <strong>Django</strong>.\n        </p>\n        <p>\n            Na ATV09, o menu e os conteúdos deixaram de ficar escritos direto nos arquivos HTML:\n            eles ficam guardados no <strong>banco de dados</strong> e são cadastrados pelo\n            <strong>Django Admin</strong>. A navegação usa as URLs e as Views do Django.\n        </p>\n\n        <!-- Área que reúne os dois integrantes. -->\n        <section class=\"dupla-capa\">\n            <article class=\"cartao-capa\">\n                <img class=\"foto-capa\" src=\"/static/portal/img/gabriel-perfil.jpeg\" alt=\"Foto de Gabriel Barbosa da Silva\">\n                <h4>Gabriel Barbosa</h4>\n                <p>Currículo pessoal e tema livre sobre God of War 2.</p>\n            </article>\n\n            <article class=\"cartao-capa\">\n                <img class=\"foto-capa\" src=\"/static/portal/img/eduardo-perfil.png\" alt=\"Foto de Eduardo Joaquim Santos da Silva\">\n                <h4>Eduardo Joaquim</h4>\n                <p>Currículo pessoal e tema livre sobre Dr. Stone.</p>\n            </article>\n        </section>\n\n        <p class=\"frase-capa\">Use o menu para acessar os currículos, os temas escolhidos e a Ouvidoria.</p>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 2,
+    "fields": {
+      "titulo": "Currículo - Gabriel",
+      "slug": "curriculo-gabriel",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">Currículo - Gabriel Barbosa</h2>\n\n    <article class=\"caixa caixa-escura\">\n        <img class=\"imagem-perfil\" src=\"/static/portal/img/gabriel-perfil.jpeg\" alt=\"Foto de Gabriel Barbosa da Silva\">\n        <h3>GABRIEL BARBOSA DA SILVA</h3>\n        <p>+55 (11) 97481-7785 | Turma: 513</p>\n\n        <h3 class=\"subtitulo\">Conhecimentos e Habilidades</h3>\n        <ul>\n            <li>Conhecimentos intermediários sobre Python, HTML, CSS, JavaScript e C#.</li>\n            <li>Comunicação, trabalho em equipe, organização, proatividade e adaptabilidade.</li>\n        </ul>\n\n        <h3 class=\"subtitulo\">Objetivos e Interesses</h3>\n        <ul>\n            <li>Seguir na área da programação, principalmente em desenvolvimento web e jogos.</li>\n        </ul>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 3,
+    "fields": {
+      "titulo": "Tema: God of War 2",
+      "slug": "tema-god-of-war-2",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">God of War 2 - Gabriel</h2>\n\n    <article class=\"caixa caixa-escura\">\n        <img class=\"imagem-capa\" src=\"/static/portal/img/god-of-war-2-capa.png\" alt=\"Capa do jogo God of War 2\">\n\n        <p><strong>Protagonista:</strong> Kratos</p>\n        <p><strong>Plataforma:</strong> PlayStation 2 (2007)</p>\n\n        <h3 class=\"subtitulo\">Sinopse</h3>\n        <p>\n            God of War II continua a história de Kratos, consumido pela vingança contra os deuses do Olimpo.\n            Depois de ser traído por Zeus, ele começa uma nova jornada para mudar seu destino.\n        </p>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 4,
+    "fields": {
+      "titulo": "Currículo - Eduardo",
+      "slug": "curriculo-eduardo",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">Currículo - Eduardo Joaquim</h2>\n\n    <article class=\"caixa caixa-escura\">\n        <img class=\"imagem-perfil\" src=\"/static/portal/img/eduardo-perfil.png\" alt=\"Foto de Eduardo Joaquim Santos da Silva\">\n        <h3>EDUARDO JOAQUIM SANTOS DA SILVA</h3>\n        <p>ejss13@aluno.ifal.edu.br | (82) 99954-9934 | Turma: 523</p>\n        <p>3º Ano Informática IFAL - Palmeira dos Índios</p>\n\n        <h3 class=\"subtitulo\">Formação Acadêmica</h3>\n        <table>\n            <tr>\n                <td>Instituição</td>\n                <td>Instituto Federal de Alagoas - IFAL</td>\n            </tr>\n            <tr>\n                <td>Curso</td>\n                <td>Técnico em Informática</td>\n            </tr>\n        </table>\n\n        <h3 class=\"subtitulo\">Habilidades e Objetivos</h3>\n        <ul>\n            <li>HTML, CSS, Python, lógica de programação e inglês.</li>\n            <li><strong>Objetivo:</strong> vaga de estágio na área de TI.</li>\n        </ul>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 5,
+    "fields": {
+      "titulo": "Tema: Dr. Stone",
+      "slug": "tema-dr-stone",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">Dr. Stone - Eduardo</h2>\n\n    <article class=\"caixa caixa-escura\">\n        <img class=\"imagem-capa\" src=\"/static/portal/img/dr-stone.png\" alt=\"Imagem do anime Dr. Stone\">\n\n        <h3 class=\"subtitulo\">Sinopse</h3>\n        <p>\n            Após a humanidade ser petrificada, o gênio Senku desperta 3.700 anos depois e decide\n            reconstruir a civilização usando o poder da ciência.\n        </p>\n\n        <h3 class=\"subtitulo\">Por que usar na educação?</h3>\n        <ul>\n            <li>Ajuda a contextualizar química, física e biologia.</li>\n            <li>Mostra a importância do método científico.</li>\n            <li>Incentiva trabalho em equipe e curiosidade.</li>\n        </ul>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.conteudo",
+    "pk": 6,
+    "fields": {
+      "titulo": "Contato / Ouvidoria",
+      "slug": "contato",
+      "conteudo_html": "<section class=\"conteudo\">\n    <h2 class=\"titulo-conteudo\">Contato / Ouvidoria</h2>\n\n    <article class=\"caixa caixa-clara\">\n        <p>\n            Preencha o formulário abaixo para enviar uma dúvida, sugestão ou crítica para a dupla.\n            Os campos possuem validação nativa do navegador (Client-Side) e, antes do envio,\n            um resumo de revisão será exibido para confirmação.\n        </p>\n\n        <!-- Formulário com method=\"GET\". A função confirmarEnvio() está em static/portal/js/contato.js. -->\n        <form id=\"form-contato\" class=\"form-contato\" method=\"GET\" action=\"/mensagem-enviada/\" onsubmit=\"return confirmarEnvio(event)\" novalidate>\n\n            <fieldset>\n                <legend>Dados Pessoais</legend>\n\n                <div class=\"campo\">\n                    <label for=\"nome\">Nome completo:</label>\n                    <input type=\"text\" id=\"nome\" name=\"nome\" placeholder=\"Digite seu nome completo\" required minlength=\"3\">\n                </div>\n\n                <div class=\"campo\">\n                    <label for=\"email\">E-mail:</label>\n                    <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"seuemail@exemplo.com\" required>\n                </div>\n\n                <div class=\"campo\">\n                    <label for=\"telefone\">Telefone:</label>\n                    <input type=\"tel\" id=\"telefone\" name=\"telefone\" placeholder=\"(82) 99999-9999\" pattern=\"^\\(?\\d{2}\\)?\\s?9?\\d{4}-?\\d{4}$\" title=\"Use o formato (DD) 9XXXX-XXXX\" required>\n                </div>\n            </fieldset>\n\n            <fieldset>\n                <legend>Detalhes da Mensagem</legend>\n\n                <div class=\"campo\">\n                    <label for=\"assunto\">Assunto:</label>\n                    <select id=\"assunto\" name=\"assunto\" required>\n                        <option value=\"\" disabled selected>Selecione um assunto</option>\n                        <option value=\"Dúvida\">Dúvida</option>\n                        <option value=\"Sugestão\">Sugestão</option>\n                        <option value=\"Crítica\">Crítica</option>\n                    </select>\n                </div>\n\n                <div class=\"campo campo-radio\">\n                    <span class=\"rotulo-grupo\">Perfil do usuário:</span>\n\n                    <span class=\"opcao-radio\">\n                        <input type=\"radio\" id=\"perfil-aluno\" name=\"perfil\" value=\"Aluno\" required>\n                        <label for=\"perfil-aluno\">Aluno</label>\n                    </span>\n\n                    <span class=\"opcao-radio\">\n                        <input type=\"radio\" id=\"perfil-professor\" name=\"perfil\" value=\"Professor\">\n                        <label for=\"perfil-professor\">Professor</label>\n                    </span>\n\n                    <span class=\"opcao-radio\">\n                        <input type=\"radio\" id=\"perfil-comunidade\" name=\"perfil\" value=\"Comunidade Externa\">\n                        <label for=\"perfil-comunidade\">Comunidade Externa</label>\n                    </span>\n                </div>\n\n                <div class=\"campo\">\n                    <label for=\"mensagem\">Mensagem:</label>\n                    <textarea id=\"mensagem\" name=\"mensagem\" rows=\"5\" placeholder=\"Escreva sua mensagem (mínimo de 15 caracteres)\" minlength=\"15\" required></textarea>\n                </div>\n            </fieldset>\n\n            <button type=\"submit\" class=\"btn-menu btn-enviar\">Enviar Mensagem</button>\n        </form>\n\n        <!-- Trabalho de pesquisa em PDF da ATV07, guardado nos arquivos estáticos. -->\n        <p>\n            <a class=\"btn-menu btn-download\" href=\"/static/portal/docs/pesquisa_validacao.pdf\" target=\"_blank\" rel=\"noopener noreferrer\" download>Baixar Pesquisa (PDF)</a>\n        </p>\n    </article>\n</section>\n",
+      "ativo": true
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 1,
+    "fields": {
+      "titulo": "Início",
+      "tipo_destino": "interno",
+      "ordem": 1,
+      "ativo": true,
+      "conteudo": 1,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 2,
+    "fields": {
+      "titulo": "Currículo - Gabriel",
+      "tipo_destino": "interno",
+      "ordem": 2,
+      "ativo": true,
+      "conteudo": 2,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 3,
+    "fields": {
+      "titulo": "Tema: God of War 2",
+      "tipo_destino": "interno",
+      "ordem": 3,
+      "ativo": true,
+      "conteudo": 3,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 4,
+    "fields": {
+      "titulo": "Currículo - Eduardo",
+      "tipo_destino": "interno",
+      "ordem": 4,
+      "ativo": true,
+      "conteudo": 4,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 5,
+    "fields": {
+      "titulo": "Tema: Dr. Stone",
+      "tipo_destino": "interno",
+      "ordem": 5,
+      "ativo": true,
+      "conteudo": 5,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 6,
+    "fields": {
+      "titulo": "Contato / Ouvidoria",
+      "tipo_destino": "interno",
+      "ordem": 6,
+      "ativo": true,
+      "conteudo": 6,
+      "url_externa": ""
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 7,
+    "fields": {
+      "titulo": "GitHub - Gabriel",
+      "tipo_destino": "externo",
+      "ordem": 7,
+      "ativo": true,
+      "conteudo": null,
+      "url_externa": "https://github.com/GabrielBarbosadaSilva-afk"
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 8,
+    "fields": {
+      "titulo": "GitHub - Eduardo",
+      "tipo_destino": "externo",
+      "ordem": 8,
+      "ativo": true,
+      "conteudo": null,
+      "url_externa": "https://github.com/Eduifal15"
+    }
+  },
+  {
+    "model": "portal.menu",
+    "pk": 9,
+    "fields": {
+      "titulo": "W3Schools",
+      "tipo_destino": "externo",
+      "ordem": 9,
+      "ativo": true,
+      "conteudo": null,
+      "url_externa": "https://www.w3schools.com"
+    }
+  }
+]

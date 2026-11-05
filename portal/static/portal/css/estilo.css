@@ -474,7 +474,7 @@ a.btn-menu.ativo {
     padding-bottom: 4px;
 }
 
-.btn-voltar {
+a.btn-voltar {
     display: inline-block;
     width: auto;
     padding: 10px 20px;
