@@ -1,0 +1,490 @@
+/* GABRIEL BARBOSA DA SILVA E EDUARDO JOAQUIM SANTOS DA SILVA - ATV09 - Turmas 513/523 */
+
+/* Configuração geral para o tamanho dos elementos não estourar quando usamos padding e borda. */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página. */
+body {
+    background-color: #2b2b2b;
+    background-image: url('../img/background-image.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 15px;
+    width: 85%;
+    min-height: 100vh;
+
+    /* Aqui usei CSS Grid para montar o layout principal do site em duas colunas no computador. */
+    display: grid;
+
+    /* A primeira coluna fica para o menu e a segunda fica para o conteúdo principal. */
+    grid-template-columns: 24% 1fr;
+
+    /* As áreas do Grid deixam claro onde ficam topo, menu, conteúdo e rodapé. */
+    grid-template-areas:
+        "topo topo"
+        "menu conteudo"
+        "rodape rodape";
+
+    gap: 10px;
+}
+
+/* Cabeçalho do site. */
+#topo {
+    grid-area: topo;
+    background-color: #c44444;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#topo p {
+    margin: 0;
+}
+
+/* Menu lateral. */
+#menu {
+    grid-area: menu;
+    min-height: 700px;
+    background-color: #c44444;
+    border: 2px solid black;
+    text-align: center;
+    padding: 15px 10px;
+
+    /* Usei Flexbox para deixar os botões um embaixo do outro, sem precisar usar <br>. */
+    display: flex;
+
+    /* A direção column deixa os itens do menu na vertical. */
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+/* Área principal onde aparece o conteúdo escolhido no menu. */
+#conteudo {
+    grid-area: conteudo;
+    min-height: 700px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+/* Rodapé da página. */
+#rodape {
+    grid-area: rodape;
+    background-color: #c44444;
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    /* Usei Flexbox no rodapé para organizar o texto e os links com espaçamento. */
+    display: flex;
+
+    /* O flex-wrap deixa os links quebrarem linha se a tela ficar pequena. */
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 10px 20px;
+}
+
+#rodape p {
+    width: 100%;
+    margin: 0;
+}
+
+#rodape a {
+    color: white;
+}
+
+/* Seção principal de cada conteúdo (o HTML vem do banco de dados). */
+.conteudo {
+    width: 100%;
+}
+
+/* Caixa usada para juntar os textos e imagens de cada parte. */
+.caixa {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.caixa-clara {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.caixa-escura {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.titulo {
+    color: white;
+    margin: 5px 0;
+}
+
+.titulo-conteudo {
+    color: black;
+    margin-top: 0;
+}
+
+/* Estilo especial da capa para ela ficar mais bonita, mas ainda simples. */
+.capa-inicio {
+    text-align: center;
+    border: 2px solid #c44444;
+    background-color: #ffffff;
+}
+
+.capa-inicio h3 {
+    color: #c44444;
+    margin-top: 0;
+}
+
+/* Usei Flexbox aqui para colocar os cartões dos dois integrantes lado a lado no computador. */
+.dupla-capa {
+    display: flex;
+
+    /* O gap cria espaço entre os cartões sem precisar colocar margem em cada um. */
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.cartao-capa {
+    background-color: #eeeeee;
+    border: 1px solid #c44444;
+    border-radius: 5px;
+    padding: 12px;
+    width: 50%;
+}
+
+.cartao-capa h4 {
+    color: #c44444;
+    margin: 8px 0;
+}
+
+.cartao-capa p {
+    margin-bottom: 0;
+}
+
+.foto-capa {
+    width: 90px;
+    max-width: 70%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.frase-capa {
+    font-weight: bold;
+    color: #c44444;
+}
+
+.subtitulo {
+    color: #c44444;
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+}
+
+p,
+li {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Estilo dos botões do menu. */
+.btn-menu {
+    background-color: #1b1b1b;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-menu:hover {
+    background-color: white;
+    color: #c44444;
+    border: 2px solid #1b1b1b;
+}
+
+/* Regra para todas as imagens ficarem responsivas e não passarem da largura da tela. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagem-perfil {
+    width: 110px;
+    max-width: 60%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.imagem-capa {
+    width: 260px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+td {
+    border: 1px solid #c44444;
+    padding: 6px;
+}
+
+#aviso-js {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Media query para telas menores que 768px, que normalmente são celulares. */
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 8px;
+
+        /* No celular, o Grid passa a ter somente uma coluna. */
+        grid-template-columns: 1fr;
+
+        /* Aqui o menu deixa de ficar na lateral e passa para baixo do cabeçalho. */
+        grid-template-areas:
+            "topo"
+            "menu"
+            "conteudo"
+            "rodape";
+    }
+
+    #menu {
+        min-height: auto;
+    }
+
+    #conteudo {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+    }
+
+    /* No celular o menu vira uma área com os itens lado a lado, quebrando de linha.
+       Assim ele ocupa menos altura da tela do que uma coluna com todos os itens. */
+    #menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #menu .titulo {
+        width: 100%;
+    }
+
+    #menu .btn-menu {
+        width: auto;
+        flex: 1 1 40%;
+    }
+
+    .imagem-capa {
+        width: 100%;
+    }
+
+    /* No celular, o Flexbox muda os cartões da capa para ficarem um abaixo do outro. */
+    .dupla-capa {
+        flex-direction: column;
+    }
+
+    .cartao-capa {
+        width: 100%;
+    }
+}
+
+/* Media query extra para celulares muito estreitos, diminuindo espaços para caber melhor. */
+@media (max-width: 420px) {
+    body {
+        padding: 5px;
+    }
+
+    #topo,
+    #menu,
+    #conteudo,
+    #rodape {
+        border-width: 1px;
+    }
+
+    .caixa {
+        padding: 10px;
+    }
+}
+
+/* ===================================================================== */
+/* NOVIDADES DA ATV07 - Formulário de Contato/Ouvidoria e validação      */
+/* ===================================================================== */
+
+/* No Django o menu é feito com links <a>, então eles precisam parecer botões. */
+a.btn-menu {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+/* Item do menu da página que está aberta no momento. */
+a.btn-menu.ativo {
+    background-color: white;
+    color: #c44444;
+    border: 2px solid #1b1b1b;
+}
+
+/* Link de download (usado na seção de Contato). Reaproveita o visual do .btn-menu. */
+.btn-download {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Agrupamentos do formulário (fieldset). */
+.form-contato fieldset {
+    border: 1px solid #c44444;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    padding: 12px 15px 15px 15px;
+}
+
+.form-contato legend {
+    color: #c44444;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* Cada linha do formulário (label + campo). */
+.campo {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label,
+.rotulo-grupo {
+    font-weight: bold;
+    color: #1b1b1b;
+}
+
+/* Estilo padrão dos campos de entrada. */
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato input[type="tel"],
+.form-contato select,
+.form-contato textarea {
+    padding: 8px;
+    border: 2px solid #999999;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Grupo de botões de opção (radio) do Perfil do Usuário. */
+.campo-radio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.campo-radio .rotulo-grupo {
+    width: 100%;
+}
+
+.opcao-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opcao-radio label {
+    font-weight: normal;
+}
+
+/* Estados visuais nativos do HTML: :valid e :invalid.
+   Usamos :not(:placeholder-shown) para só colorir depois que o usuário começar
+   a digitar, evitando que o formulário inicie todo vermelho antes do preenchimento. */
+.form-contato input:not(:placeholder-shown):invalid,
+.form-contato textarea:not(:placeholder-shown):invalid {
+    border-color: #c0392b;
+    background-color: #fdecea;
+}
+
+.form-contato input:not(:placeholder-shown):valid,
+.form-contato textarea:not(:placeholder-shown):valid {
+    border-color: #2e8b57;
+    background-color: #eafaf1;
+}
+
+/* O <select> não tem placeholder, então o estado :invalid é aplicado assim que
+   a página carrega (opção vazia selecionada) e muda para :valid ao escolher um assunto. */
+.form-contato select:invalid {
+    border-color: #c0392b;
+}
+
+.form-contato select:valid {
+    border-color: #2e8b57;
+    background-color: #eafaf1;
+}
+
+/* Botão de envio do formulário. */
+.btn-enviar {
+    width: auto;
+    padding: 10px 25px;
+    background-color: #c44444;
+}
+
+.btn-enviar:hover {
+    background-color: white;
+    color: #c44444;
+}
+
+/* ===================================================================== */
+/* Página de confirmação do formulário (mensagem enviada)                */
+/* ===================================================================== */
+
+.subtitulo-sucesso {
+    color: #c44444;
+    border-bottom: 1px solid #c44444;
+    padding-bottom: 4px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .campo-radio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
