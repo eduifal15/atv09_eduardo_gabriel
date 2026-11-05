@@ -1,0 +1,55 @@
+{% load static %}
+<!-- GABRIEL BARBOSA DA SILVA E EDUARDO JOAQUIM SANTOS DA SILVA - ATV09 - Turmas 513/523 -->
+<!-- Template base: guarda a estrutura principal do portal (cabeçalho, menu, área principal e rodapé). -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Portal Unificado{% endblock %} - ATV09</title>
+    <!-- Ícone exibido na aba do navegador. -->
+    <link rel="icon" type="image/png" href="{% static 'portal/img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/estilo.css' %}">
+</head>
+<body>
+
+    <!-- Cabeçalho principal da página. -->
+    <header id="topo">
+        <h1 class="titulo">Portal Unificado: Gabriel &amp; Eduardo</h1>
+        <p>Projeto Final de Programação Web</p>
+    </header>
+
+    <!-- Menu gerado dinamicamente a partir dos registros do Model Menu. -->
+    <nav id="menu" aria-label="Navegação principal">
+        <h2 class="titulo">Navegação</h2>
+
+        {% for item in menu %}
+            {% if item.tipo_destino == "externo" %}
+                <!-- Link externo: usa a URL cadastrada no Django Admin. -->
+                <a class="btn-menu" href="{{ item.url_externa }}" target="_blank" rel="noopener noreferrer">{{ item.titulo }}</a>
+            {% else %}
+                <!-- Link interno: a URL é montada pelo sistema de URLs do Django. -->
+                <a class="btn-menu{% if item.conteudo_id == conteudo.id %} ativo{% endif %}" href="{{ item.get_url }}"{% if item.conteudo_id == conteudo.id %} aria-current="page"{% endif %}>{{ item.titulo }}</a>
+            {% endif %}
+        {% empty %}
+            <p>Nenhum item de menu cadastrado.</p>
+        {% endfor %}
+    </nav>
+
+    <!-- Área onde fica o conteúdo principal de cada página. -->
+    <main id="conteudo">
+        {% block conteudo %}{% endblock %}
+    </main>
+
+    <!-- Rodapé com créditos e links. -->
+    <footer id="rodape">
+        <p>Desenvolvido por Gabriel Barbosa &amp; Eduardo Joaquim | Turmas 513 e 523</p>
+        <a href="https://github.com/GabrielBarbosadaSilva-afk" target="_blank" rel="noopener noreferrer">GitHub-Gabriel</a>
+        <a href="https://github.com/Eduifal15" target="_blank" rel="noopener noreferrer">GitHub-Eduardo</a>
+    </footer>
+
+    <!-- JavaScript do formulário de contato (a navegação usa URLs do Django, não JavaScript). -->
+    <script src="{% static 'portal/js/contato.js' %}"></script>
+
+</body>
+</html>

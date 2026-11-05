@@ -1,0 +1,9 @@
+{% extends "portal/base.html" %}
+
+{% block titulo %}{{ conteudo.titulo }}{% endblock %}
+
+{% block conteudo %}
+    <!-- O HTML vem do banco de dados (campo conteudo_html do Model Conteudo).
+         O filtro "safe" faz o navegador interpretar as tags em vez de mostrá-las como texto. -->
+    {{ conteudo.conteudo_html|safe }}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "portal/base.html" %}
+
+{% block titulo %}Mensagem Enviada{% endblock %}
+
+{% block conteudo %}
+    <section class="conteudo">
+        <h2 class="titulo-conteudo">Mensagem Enviada com Sucesso!</h2>
+
+        <article class="caixa caixa-clara capa-inicio">
+            {% if recebeu_dados %}
+                <p>Obrigado, {{ nome }}! Recebemos sua mensagem e em breve entraremos em contato pelo e-mail {{ email }}.</p>
+
+                <h3 class="subtitulo-sucesso">Resumo dos dados recebidos</h3>
+                <table id="tabela-dados">
+                    {% for rotulo, valor in campos %}
+                        <tr>
+                            <td>{{ rotulo }}</td>
+                            <td>{{ valor }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Nenhum dado de formulário foi encontrado na URL. Volte ao portal e envie a mensagem pela seção Contato/Ouvidoria.</p>
+            {% endif %}
+
+            <p><a class="btn-menu btn-voltar" href="{% url 'inicio' %}">Voltar ao Portal</a></p>
+        </article>
+    </section>
+{% endblock %}
