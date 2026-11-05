@@ -3,7 +3,7 @@
 ## Identificação da dupla
 
 - Gabriel Barbosa da Silva — Turma 513
-- Eduardo Joaquim Santos da Silva — Turma 523
+- Eduardo Joaquim Santos da Silva — Turma 513
 
 Curso Técnico em Informática — IFAL, Campus Palmeira dos Índios.
 

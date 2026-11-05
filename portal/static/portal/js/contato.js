@@ -1,4 +1,4 @@
-// GABRIEL BARBOSA DA SILVA E EDUARDO JOAQUIM SANTOS DA SILVA - ATV09 - Turmas 513/523
+// GABRIEL BARBOSA DA SILVA E EDUARDO JOAQUIM SANTOS DA SILVA - ATV09 - Turma 513
 // JavaScript do formulário de Contato / Ouvidoria (veio da ATV07).
 // A navegação do portal NÃO usa JavaScript: ela é feita pelas URLs e Views do Django.
 
